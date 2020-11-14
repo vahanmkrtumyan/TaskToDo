@@ -1,0 +1,61 @@
+.table-drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 50%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e7f6fe;
+  border-radius: 24px;
+  transform: translateX(100%);
+  transition: 0.3s;
+  overflow-y: scroll;
+
+  &.opened {
+    transform: translateX(0);
+  }
+
+  .top_buttons {
+    padding: 16px 26px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: #0085ff;
+      font-size: 30px;
+      color: #ffffff;
+      font-weight: 100;
+      position: relative;
+      right: 5px;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    padding: 10px 20px;
+    color: #0085ff;
+    font-weight: 900;
+  }
+
+  input {
+    padding: 0;
+    height: 48px;
+    border: 0;
+    width: 0;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.5s;
+
+    &.inputOpen {
+      padding-left: 10px;
+      width: 300px;
+    }
+  }
+}
