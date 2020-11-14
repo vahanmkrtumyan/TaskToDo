@@ -1,10 +1,18 @@
 import React from 'react'
 import Table from './components/table';
 import Drawer from './components/drawer';
+import firestore from './firebase';
+
+import {useCollectionData} from 'react-firebase-hooks/firestore';
 
 function App() {
   const [drawerOpened, setDrawerOpened] = React.useState(false);
   const [selectedPerson, setSelectedPerson] = React.useState();
+
+  const personsRef = firestore.collection('persons');
+  const [persons] = useCollectionData(personsRef);
+
+  console.log(persons)
 
   const handlePersonClick = (selected) => {
     setSelectedPerson(selected)
