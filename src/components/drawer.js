@@ -72,14 +72,19 @@ const Drawer = ({ selected, drawerOpened, handleClose }) => {
             value={newToDo}
             placeholder="New to-do description"
           />
-          <button onClick={handlePlusClick}>
+          <button
+            className="table-drawer__plus-button"
+            onClick={handlePlusClick}
+          >
             <img
               src={inputOpen ? completedIcon : plusIcon}
               alt={inputOpen ? 'confirm' : 'plus'}
             />
           </button>
         </div>
-        <img onClick={onClose} src={closeIcon} alt="close" />
+        <button className="table-drawer__close-button" onClick={onClose}>
+          <img src={closeIcon} alt="close" />
+        </button>
       </div>
       <p className="table-drawer__title">{`To-do list for ${selected?.name}`}</p>
       <ToDos handleMark={handleMark} data={todos} />

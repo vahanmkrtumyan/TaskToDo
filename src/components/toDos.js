@@ -28,7 +28,7 @@ const ToDos = ({ data, handleMark }) => {
           <div key={todo.id} className="todo">
             <div className="todo__body">
               {todo.completed ? completed : pending}
-              <p className="todo__title">{todo.title}</p>
+              <p className="todo__text">{todo.title}</p>
             </div>
             <button
               disabled={todo.completed}

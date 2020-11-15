@@ -10,44 +10,36 @@
   box-shadow: 4px 4px 11px rgba(0, 133, 255, 0.11);
 }
 
-.todo__title {
-  // max-width: 50%;
+.todo__text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .todo__status {
-  display: flex;
+  display: inline-flex;
   color: #ffffff;
-  height: 24px;
+  padding: 5px 16px 5px 10px;
   border-radius: 8px;
-  justify-content: center;
   align-items: center;
   font-size: 14px;
   margin-bottom: 10px;
+
+  &.pending {
+    background: #fc9700;
+  }
+
+  &.completed {
+    background: #03bc90;
+  }
 
   img {
     margin-right: 5px;
   }
 }
 
-.pending {
-  background: #fc9700;
-  width: 98px;
-}
-
-.completed {
-  background: #03bc90;
-  width: 116px;
-}
-
 .todo__body {
   width: calc(100% - 170px);
-}
-
-.disabled {
-  background: #c7c7c7;
 }
 
 .todo__button {
@@ -56,6 +48,12 @@
   border-radius: 8px;
   width: 155px;
   height: 37px;
+  line-height: 37px;
   font-size: 18px;
   font-weight: 300;
+
+  &.disabled {
+    background: #c7c7c7;
+    cursor: default;
+  }
 }
