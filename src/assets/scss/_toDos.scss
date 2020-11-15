@@ -1,22 +1,23 @@
 .todo {
-  margin: 10px 26px;
+  margin: 10px 0;
   background: #ffffff;
   border-radius: 24px;
   height: 87px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px 0 10px;
+  padding: 0 16px 0 24px;
+  box-shadow: 4px 4px 11px rgba(0, 133, 255, 0.11);
 }
 
-p {
-  max-width: 20vw;
+.todo__title {
+  // max-width: 50%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.status {
+.todo__status {
   display: flex;
   color: #ffffff;
   height: 24px;
@@ -41,15 +42,15 @@ p {
   width: 116px;
 }
 
-.todo_body {
-  margin-left: 24px;
+.todo__body {
+  width: calc(100% - 170px);
 }
 
 .disabled {
   background: #c7c7c7;
 }
 
-button {
+.todo__button {
   background: #0085ff;
   color: #ffffff;
   border-radius: 8px;
@@ -57,24 +58,4 @@ button {
   height: 37px;
   font-size: 18px;
   font-weight: 300;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(86, 182, 234, 0.38);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ddeef8;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(25, 31, 34, 0.38);
 }
